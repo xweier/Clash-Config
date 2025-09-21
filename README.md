@@ -2,7 +2,7 @@
 
 - (mihomo内核)clash客户端通用配置文件
 
-#### MerlinClash插件懒人配置
+#### dweierClash插件懒人配置
 
 ---
 
