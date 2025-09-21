@@ -29,4 +29,4 @@
 - 未经允许禁止转载与传播 禁止 Fork ,此库仅为个人备份
 
 ### Sub-Store 脚本操作 不联网
-- [Sub-Store rename]()
+- [Sub-Store rename](https://raw.githubusercontent.com/xweier/Clash-Config/refs/heads/main/Sub-Store%20rename.js)
