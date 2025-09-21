@@ -2,8 +2,9 @@
 
 - (mihomo内核)clash客户端通用配置文件
 
-## MerlinClash插件懒人配置
+#### MerlinClash插件懒人配置
 
+---
 
 ## 电脑端
 1. [Clash verge rev](https://github.com/clash-verge-rev/clash-verge-rev)
