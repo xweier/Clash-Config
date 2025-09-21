@@ -6,9 +6,9 @@
 # 此脚本覆盖Sub文件管理-脚本操作
 # 推荐同步到自己的GitHub库中 拿到文件地址
 # 也可配置本地yaml文件 只需配置三个参数
+# 支持多机场订阅地址 注意区分机场名称即可
 # 机场名称-机场订阅地址-机场1名字
-#机场1名字 用来区分多代理组的前缀名称
-
+# 机场1名字 用来区分多代理组的前缀名称
 
 # ========================
 
@@ -446,6 +446,7 @@ rule-providers:
   facebook_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/facebook.mrs" }
   twitter_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/twitter.mrs" }
   private_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/private.mrs" }
+
 
 
 
