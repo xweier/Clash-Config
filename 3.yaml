@@ -11,7 +11,7 @@ proxy-groups:
     type: url-test
     include-all: true
     tolerance: 50
-    interval: 180
+    interval: 300
     filter: "^((?!(直连|拒绝)).)*$"  
 
   # 业务分流组
@@ -317,4 +317,5 @@ rules:
   - RULE-SET,China / Domain,国内网站
   - RULE-SET,China / IP,国内网站,no-resolve
   - RULE-SET,Private / Domain,国内网站
+
   - MATCH,漏网之鱼
