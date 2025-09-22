@@ -2,8 +2,6 @@
 
 - (mihomo内核)clash客户端通用配置文件
 
-#### dweierClash插件懒人配置
-
 ---
 
 ## 电脑端
