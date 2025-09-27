@@ -42,21 +42,21 @@ proxies:
 # ========================
 # 主要端口设置
 # ========================
-port: 7890
-socks-port: 7891
-redir-port: 7892
-mixed-port: 7893
-tproxy-port: 7895
+# port: 7890
+# socks-port: 7891
+# redir-port: 7892
+# mixed-port: 7893
+# tproxy-port: 7895
 
 allow-lan: true
 mode: rule
-log-level: info
+log-level: error
 
-external-controller: 0.0.0.0:9090
-external-ui: ui
-external-ui-name: zashboard
-external-ui-url: https://gh-proxy.com/github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
-secret: "123456"
+# external-controller: 0.0.0.0:9090
+# external-ui: ui
+# external-ui-name: zashboard
+# external-ui-url: https://gh-proxy.com/github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip
+# secret: "123456"
 
 # ========================
 # DNS 设置
@@ -75,7 +75,7 @@ dns:
     - geosite:cn
     - +.ifaner.dd94wan.com
 
-ipv6: true
+ipv6: false
 
 # ========================
 # TUN 模块
@@ -100,9 +100,8 @@ profile:
 default: &default
   type: select
   proxies:
-    - 直连
-    - 所有-手动
     - 所有-自动
+    - 所有-手动
     - 香港-故转
     - 台湾-故转
     - 日本-故转
@@ -111,6 +110,7 @@ default: &default
     - 美国-故转
     - 英国-故转
     - 其他地区-故转
+    - 直连
     - 拒绝
 
 proxy-groups:
@@ -162,8 +162,8 @@ proxy-groups:
     interval: 180
     lazy: false
     proxies:
-      - 香港-手动
       - 香港-自动
+      - 香港-手动
   
   - name: 香港-手动
     icon: https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/double-tap.png
@@ -186,8 +186,8 @@ proxy-groups:
     interval: 180
     lazy: false
     proxies:
-      - 台湾-手动
       - 台湾-自动
+      - 台湾-手动
   - name: 台湾-手动
     icon: https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/double-tap.png
     type: select
@@ -208,8 +208,8 @@ proxy-groups:
     interval: 180
     lazy: false
     proxies:
-      - 日本-手动
       - 日本-自动
+      - 日本-手动
   - name: 日本-手动
     icon: https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/double-tap.png
     type: select
@@ -230,8 +230,8 @@ proxy-groups:
     interval: 180
     lazy: false
     proxies:
-      - 新加坡-手动
       - 新加坡-自动
+      - 新加坡-手动
   - name: 新加坡-手动
     icon: https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/double-tap.png
     type: select
@@ -252,8 +252,8 @@ proxy-groups:
     interval: 180
     lazy: false
     proxies:
-      - 韩国-手动
       - 韩国-自动
+      - 韩国-手动
   - name: 韩国-手动
     icon: https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/double-tap.png
     type: select
@@ -274,8 +274,8 @@ proxy-groups:
     interval: 180
     lazy: false
     proxies:
-      - 美国-手动
       - 美国-自动
+      - 美国-手动
   - name: 美国-手动
     icon: https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/double-tap.png
     type: select
@@ -296,8 +296,8 @@ proxy-groups:
     interval: 180
     lazy: false
     proxies:
-      - 英国-手动
       - 英国-自动
+      - 英国-手动
   - name: 英国-手动
     icon: https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/double-tap.png
     type: select
@@ -318,8 +318,8 @@ proxy-groups:
     interval: 180
     lazy: false
     proxies:
-      - 其他地区-手动
       - 其他地区-自动
+      - 其他地区-手动
   - name: 其他地区-手动
     icon: https://raw.githubusercontent.com/ifanrBook/ClashConfig/refs/heads/main/icon/double-tap.png
     type: select
@@ -446,6 +446,7 @@ rule-providers:
   facebook_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/facebook.mrs" }
   twitter_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/twitter.mrs" }
   private_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/refs/heads/meta/geo/geoip/private.mrs" }
+
 
 
 
