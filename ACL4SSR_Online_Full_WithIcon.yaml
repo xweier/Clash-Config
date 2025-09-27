@@ -94,6 +94,10 @@ proxy-groups:
       - 全球直连
       - 台湾节点
       - 香港节点
+  - name: Tiktok
+    type: select
+    proxies:
+      - 🇺🇲 美国节点
   - name: 国外媒体
     icon: https://testingcf.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ForeignMedia.png
     type: select
@@ -531,6 +535,13 @@ rule-providers:
     interval: 86400
     format: text
     type: http
+  Tiktok:
+    url: https://ghfast.top/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.mrs
+    path: ./ruleset/tiktok.mrs
+    behavior: domain
+    interval: 86400
+    format: mrs
+    type: http
 
 rules:
   - "RULE-SET,LocalAreaNetwork,全球直连"
@@ -559,9 +570,11 @@ rules:
   - "RULE-SET,Bilibili,哔哩哔哩"
   - "RULE-SET,ChinaMedia,国内媒体"
   - "RULE-SET,ProxyMedia,国外媒体"
+  - "RULE-SET,Tiktok,🎥 Tiktok"
   - "RULE-SET,ProxyGFWlist,节点选择"
   - "RULE-SET,ChinaDomain,全球直连"
   - "RULE-SET,ChinaCompanyIp,全球直连"
   - "RULE-SET,Download,全球直连"
   - "GEOIP,CN,全球直连"
+
   - "MATCH,漏网之鱼"
